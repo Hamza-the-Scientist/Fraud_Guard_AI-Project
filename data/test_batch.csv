@@ -1,0 +1,11 @@
+merchant,merchant_category,amt,gender,city,state,city_pop,distance_from_home,is_night_transaction,transaction_hour,weekend_transaction
+Amazon,shopping_net,49.99,M,New York,NY,500000,5.2,0,14,0
+Walmart,grocery_pos,120.50,F,Los Angeles,CA,800000,1.8,0,10,1
+Shell,gas_transport,65.00,M,Chicago,IL,200000,12.5,1,23,0
+Netflix,entertainment,15.99,F,Houston,TX,350000,0.5,0,19,0
+eBay,misc_net,299.00,M,Phoenix,AZ,150000,8.3,0,16,1
+Target,shopping_net,78.25,F,Philadelphia,PA,450000,3.1,0,13,0
+Uber,gas_transport,22.50,M,San Antonio,TX,250000,6.7,0,9,0
+Best Buy,shopping_net,549.99,F,San Diego,CA,600000,11.2,0,15,1
+Spotify,entertainment,9.99,M,Dallas,TX,300000,0.3,0,20,0
+CVS,grocery_pos,34.75,F,San Jose,CA,700000,2.4,0,11,0
