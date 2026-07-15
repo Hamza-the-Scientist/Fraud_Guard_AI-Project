@@ -56,3 +56,40 @@ class DashboardStats(BaseModel):
     flagged: int
     blocked: int
     avg_fraud_score: float
+    
+# ─── Batch I/O ────────────────────────────────────────────────────────────────
+
+class BatchTransactionResult(BaseModel):
+    row_number: int
+    transaction_id: Optional[str] = None
+    merchant: Optional[str] = None
+    amt: Optional[float] = None
+    fraud_probability: Optional[float] = None
+    risk_tier: Optional[str] = None
+    status: Optional[str] = None
+    error: Optional[str] = None
+
+
+class BatchPredictionResponse(BaseModel):
+    total_rows: int
+    processed: int
+    failed: int
+    approved: int
+    pending: int
+    flagged: int
+    results: List[BatchTransactionResult]
+
+
+# ─── Merchant registration ─────────────────────────────────────────────────────
+
+class MerchantRegisterRequest(BaseModel):
+    merchant_name: str = Field(..., description="Your company or store name")
+    contact_email: str = Field(..., description="Contact email address")
+
+
+class MerchantRegisterResponse(BaseModel):
+    merchant_id: int
+    merchant_name: str
+    api_key: str
+    contact_email: str
+    message: str
