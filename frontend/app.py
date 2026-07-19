@@ -5,6 +5,7 @@ import time
 import os
 import random
 from datetime import datetime
+# pyrefly: ignore [missing-import]
 import plotly.express as px
 
 st.set_page_config(
