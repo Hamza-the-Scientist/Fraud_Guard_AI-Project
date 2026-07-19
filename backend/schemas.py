@@ -29,6 +29,7 @@ class PredictionResponse(BaseModel):
     verdict: str
     risk_tier: str
     status: str
+    explanation_text: str
     top_factors: List[ExplanationFactor] = []
 
 
@@ -56,7 +57,8 @@ class DashboardStats(BaseModel):
     flagged: int
     blocked: int
     avg_fraud_score: float
-    
+
+
 # ─── Batch I/O ────────────────────────────────────────────────────────────────
 
 class BatchTransactionResult(BaseModel):
